@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'LYUPods_Example' do
+  pod 'LYUPods', :path => '../'
+
+  target 'LYUPods_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
