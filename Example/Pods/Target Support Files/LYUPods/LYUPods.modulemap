@@ -1,0 +1,6 @@
+framework module LYUPods {
+  umbrella header "LYUPods-umbrella.h"
+
+  export *
+  module * { export * }
+}

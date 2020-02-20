@@ -7,7 +7,7 @@
 //
 
 #import "LYUViewController.h"
-
+#import <LYUPods.h>
 @interface LYUViewController ()
 
 @end
@@ -18,6 +18,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    UIColor *color = [UIColor colorWithHex:@"9999999"];
 }
 
 - (void)didReceiveMemoryWarning
