@@ -8,11 +8,13 @@
 #import "NSString+LYU.h"
 
 #import <CommonCrypto/CommonDigest.h>
+#import "LYUCommonMacro.h"
 
+YYSYNTH_DUMMY_CLASS(NSString_LYU)
 
 @implementation NSString (LYU)
 
-+ (NSString*)encodeString{
+- (NSString*)encodeString{
     
     // CharactersToBeEscaped = @":/?&=;+!@#$()~',*";
     // CharactersToLeaveUnescaped = @"[].";
@@ -53,6 +55,19 @@
             ];
     
 }
+
++ (NSString *)stringWithUUID {
+    CFUUIDRef uuid = CFUUIDCreate(NULL);
+    CFStringRef string = CFUUIDCreateString(NULL, uuid);
+    CFRelease(uuid);
+    return (__bridge_transfer NSString *)string;
+}
+
+- (NSString *)stringByTrim {
+    NSCharacterSet *set = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+    return [self stringByTrimmingCharactersInSet:set];
+}
+
 
 
 @end

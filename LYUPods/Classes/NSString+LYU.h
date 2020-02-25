@@ -11,14 +11,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSString (LYU)
 
+
+
 /// 编码
-+ (NSString*)encodeString;
+- (NSString*)encodeString;
 /// 解码
 - (NSString *)decodedString;
 
 - (BOOL)isURL;
 
+- (NSString *)md5String;
 
++ (NSString *)stringWithUUID;
+
+- (NSString *)stringByTrim;
 
 @end
 

@@ -1,5 +1,5 @@
 PODS:
-  - LYUPods (0.0.1)
+  - LYUPods (0.0.2)
 
 DEPENDENCIES:
   - LYUPods (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LYUPods: 48b57df499b1ebfaa9dc491a8f18e354de60ea9c
+  LYUPods: 452e5e0c5544b5a89c523e5ba17e6c83780f4a66
 
 PODFILE CHECKSUM: 6101a5ca0d169f5df5d88b93d44bf206dd73d3b7
 

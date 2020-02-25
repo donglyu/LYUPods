@@ -8,6 +8,10 @@
 #import "UIButton+LYU.h"
 #import <objc/runtime.h>
 
+#import "LYUCommonMacro.h"
+
+YYSYNTH_DUMMY_CLASS(UIButton_LYU)
+
 @implementation UIButton (LYU)
 
 - (void)SetUpButtonImageTitleStyle:(ButtonImageTitleStyle)style padding:(CGFloat)padding{

@@ -1,6 +1,6 @@
 {
   "name": "LYUPods",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "summary": "donglyu LYUPods for developing",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/donglyu/LYUPods",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/donglyu/LYUPods.git",
-    "tag": "0.0.1"
+    "tag": "0.0.2"
   },
   "platforms": {
     "ios": "8.0"

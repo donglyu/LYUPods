@@ -6,7 +6,9 @@
 //
 
 #import "UIColor+LYU.h"
+#import "LYUCommonMacro.h"
 
+YYSYNTH_DUMMY_CLASS(UIColor_LYU)
 
 @implementation UIColor (LYU)
 

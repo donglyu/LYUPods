@@ -6,7 +6,9 @@
 //
 
 #import "PHAsset+LYU.h"
+#import "LYUCommonMacro.h"
 
+YYSYNTH_DUMMY_CLASS(PHAsset_LYU)
 
 @implementation PHAsset (LYU)
 
