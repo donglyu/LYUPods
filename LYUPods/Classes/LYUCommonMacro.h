@@ -16,9 +16,9 @@
 #define LYUScreenH [UIScreen mainScreen].bounds.size.height
 #define LYUScreenScale [UIScreen mainScreen].scale
 
-#define kDeviceIsFaceIDIPhone (ScreenH == 812 || ScreenH == 896 || ScreenW == 812 || ScreenW == 896)
-#define kDeviceIs5Series (ScreenH == 568)
-#define kDeviceIs6Series (ScreenH == 667)
+#define kDeviceIsFaceIDIPhone (LYUScreenH == 812 || LYUScreenH == 896 || LYUScreenW == 812 || LYUScreenW == 896)
+#define kDeviceIs5Series (LYUScreenH == 568)
+#define kDeviceIs6Series (LYUScreenH == 667)
 #define kDeviceIsiPad ([[UIDevice currentDevice].model hasSuffix:@"iPad"])
 
 #define kLYUiOS11Later ([UIDevice currentDevice].systemVersion.floatValue >= 11.0f)
@@ -185,19 +185,6 @@
 }
 #endif
 
-
-#import <pthread.h>
-
-/**
- Submits a block for asynchronous execution on a main queue and returns immediately.
- */
-static inline void dispatch_async_on_main_queue(void (^block)(void)) {
-    if (pthread_main_np()) {
-        block();
-    } else {
-        dispatch_async(dispatch_get_main_queue(), block);
-    }
-}
 
 
 #endif /* LYUCommonMacro_h */

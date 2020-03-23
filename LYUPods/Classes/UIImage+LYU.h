@@ -17,6 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 从bundle中加载2x 3x图
 + (instancetype)imageWithBundleFileName:(NSString *)imageName;
 
+/// 从可选bundle中正确加载2x 3x图
++ (instancetype)imagwWithBundle:(NSString*)bundleName FileName:(NSString*)imageName;
+
 /// 带边框的圆图
 + (instancetype)imageWithName:(NSString *)name border:(CGFloat)border borderColor:(UIColor *)color;
 

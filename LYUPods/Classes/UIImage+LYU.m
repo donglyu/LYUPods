@@ -42,6 +42,23 @@ YYSYNTH_DUMMY_CLASS(UIImage_LYU)
     return [UIImage imageWithContentsOfFile: [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:realFileName]];
 }
 
++ (instancetype)imagwWithBundle:(NSString*)bundleName FileName:(NSString*)imageName{
+    if (!imageName) {
+        return nil;
+    }
+    if (!bundleName) {
+        return [self imageWithBundleFileName:imageName];
+    }
+    
+    NSString *bundlePath = [[NSBundle mainBundle]pathForResource:bundleName ofType:@"bundle"];
+    
+    NSString *realFileName = imageName;
+    if (![imageName containsString:@".png"] && ![imageName containsString:@".jpg"]) {
+        realFileName = [imageName stringByAppendingString:@".png"];
+    }
+    return [UIImage imageWithContentsOfFile: [bundlePath stringByAppendingPathComponent:realFileName]];
+}
+
 + (instancetype)imageWithName:(NSString *)name border:(CGFloat)border borderColor:(UIColor *)color{
     // 圆环的宽度
     CGFloat borderW = border;

@@ -19,6 +19,15 @@
 }
 
 - (void)LeaveThePage{
+    
+    if (self.HackLeaveThePage) {
+        BOOL result = self.HackLeaveThePage();
+        if (result == NO) {
+            return;
+        }
+    }
+    // result = YES.
+    
     NSArray *viewcontrollers = self.navigationController.viewControllers;
     if (viewcontrollers.count == 1 || viewcontrollers == nil) {
         [self dismissViewControllerAnimated:YES completion:nil];

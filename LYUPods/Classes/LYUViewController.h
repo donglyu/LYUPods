@@ -14,6 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 离开当前页面（pop or dismiss）
 - (void)LeaveThePage;
 
+/// return YES: 继续离开页面, return NO, 返回不做任何操作.
+@property (nonatomic, copy) BOOL (^HackLeaveThePage)(void);
+
 @end
 
 NS_ASSUME_NONNULL_END
