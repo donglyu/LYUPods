@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)LeaveThePage;
 
 /// return YES: 继续离开页面, return NO, 返回不做任何操作.
-@property (nonatomic, copy) BOOL (^HackLeaveThePage)(void);
+@property (nonatomic, copy, nullable) BOOL (^HackLeaveThePage)(void);
 
 @end
 

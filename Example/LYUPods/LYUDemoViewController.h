@@ -8,6 +8,6 @@
 
 @import UIKit;
 
-@interface LYUViewController : UIViewController
+@interface LYUDemoViewController : UIViewController
 
 @end

@@ -22,16 +22,14 @@
 
 
 // ---- Category ----
-#import "NSString+LYU.h"
-//#import "PHAsset+LYU.h"
-#import "UIButton+LYU.h"
-#import "UIColor+LYU.h"
-#import "UIImage+LYU.h"
-#import "UIView+LYU.h"
-#import "NSObject+LYU.h"
+#import "LYUCatogories.h"
+
 
 // ---- other ----
 #import "GCD.h"
 
+// ---- vc ----
+#import "LYUViewController.h"
+#import "LYUNavigationController.h"
 
 #endif /* LYUPods_h */

@@ -12,7 +12,7 @@
 
 @interface LYUDateKit()
 
-@property (nonatomic, strong) NSDateFormatter *formatter;
+
 
 @end
 
@@ -73,6 +73,7 @@
 + (NSDate *)DateFromString:(NSString *)dateStr Format:(NSString*)format{
     NSDateFormatter *formatter = [LYUDateKit shared].formatter;
     if (format.length) {
+        [formatter setDateFormat:format];
     }else{
         format = kDefatulTimeFromat;
     }

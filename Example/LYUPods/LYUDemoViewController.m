@@ -6,13 +6,13 @@
 //  Copyright (c) 2020 donglyu. All rights reserved.
 //
 
-#import "LYUViewController.h"
+#import "LYUDemoViewController.h"
 #import <LYUPods.h>
-@interface LYUViewController ()
+@interface LYUDemoViewController ()
 
 @end
 
-@implementation LYUViewController
+@implementation LYUDemoViewController
 
 - (void)viewDidLoad
 {
@@ -20,6 +20,10 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     UIColor *color = [UIColor colorWithHex:@"9999999"];
+    
+    NSString *dateStr = @"20:00";
+    NSDate *time = [LYUDateKit DateFromString:dateStr Format:@"HH:mm"];
+    NSLog(@"%@",time);
 }
 
 - (void)didReceiveMemoryWarning

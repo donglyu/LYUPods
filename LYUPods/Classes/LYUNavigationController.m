@@ -6,6 +6,7 @@
 //
 
 #import "LYUNavigationController.h"
+#import "LYUViewController.h"
 
 @interface LYUNavigationController ()
 
@@ -38,6 +39,17 @@
 }
 
 - (void)tapBackItem{
+    
+    if ([self.viewControllers.lastObject isKindOfClass:[LYUViewController class]]) {
+        LYUViewController *lyuvc = (LYUViewController*)self.viewControllers.lastObject;
+        if (lyuvc.HackLeaveThePage) {
+            [lyuvc LeaveThePage];
+            return;
+        }
+    }
+    
+    
+    
     NSArray *viewcontrollers=self.viewControllers;
     if (viewcontrollers.count == 1 || viewcontrollers == nil) {
         [self dismissViewControllerAnimated:YES completion:nil];

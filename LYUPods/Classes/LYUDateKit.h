@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LYUDateKit : NSObject
 
+@property (nonatomic, strong) NSDateFormatter *formatter;
+
 /// 获取当前时间的时间戳
 + (NSString *)DateTimeGetNowTimestamp;
 
